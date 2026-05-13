@@ -1,0 +1,22 @@
+
+> dev
+> astro dev
+
+[vite] connected.
+04:48:15 [types] Generated 1ms
+04:48:15 [vite] Re-optimizing dependencies because vite config has changed
+ astro  v6.3.1 ready in 1830 ms
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
+04:48:15 watching for file changes...
+04:49:29 [200] / 46ms
+04:49:29 [vite] ✨ new dependencies optimized: three, three/examples/jsm/effects/AsciiEffect.js, three/examples/jsm/loaders/STLLoader.js
+04:49:29 [vite] ✨ optimized dependencies changed. reloading
+04:50:52 [200] / 6ms
+04:50:58 [200] /about/ 33ms
+04:50:58 [200] /code/ 13ms
+04:51:33 [200] /code/ 5ms
+04:52:28 [watch] src/pages/about.astro
+04:52:32 [200] / 10ms
+04:52:38 [200] /about/ 28ms
+04:52:38 [200] /code/ 6ms

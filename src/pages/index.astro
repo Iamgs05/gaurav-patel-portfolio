@@ -1,0 +1,202 @@
+---
+import Nav from "@components/Nav.astro";
+import "@assets/intro/base.css";
+import "@assets/intro/home.css";
+import * as i18n from "src/i18n";
+import Head from "@components/Head.astro";
+import envelope from "@assets/img/icon/envelope-regular.svg";
+import linkedin from "@assets/img/icon/linkedin.svg";
+import telegram from "@assets/img/icon/telegram.svg";
+import ogImage from "@assets/img/thumbnail.webp";
+
+const lang = i18n.local(Astro.url.pathname);
+const t = i18n.t(lang, {
+	name: {
+		en: "Gaurav Patel"
+	},
+	description: {
+		en: "Gaurav Patel is a BBA student, an AI & Generative AI enthusiast, and a web developer from Nashik, India."
+	},
+	thisIs: {
+		en: "This is "
+	},
+	period: {
+		en: "."
+	},
+	aStudent: {
+		en: "a BBA student, "
+	},
+	a: {
+		en: "an "
+	},
+	aiEnthusiast: {
+		en: "AI & Generative AI enthusiast, "
+	},
+	alsoA: {
+		en: "and a "
+	},
+	webDeveloper: {
+		en: "web developer."
+	},
+	iLoveCreating: {
+		en: "I love creating "
+	},
+	experience: {
+		en: "experiences"
+	},
+	animations: {
+		en: "innovations"
+	},
+	future: {
+		en: "future"
+	},
+	certs: {
+		en: "Google Certificates"
+	},
+	aiFocused: {
+		en: "AI Focused"
+	},
+	yearsLearning: {
+		en: "Year Learning"
+	},
+	curiosity: {
+		en: "Curiosity"
+	},
+	thats: {
+		en: "That's a lo"
+	},
+	lot: {
+		en: "t"
+	},
+	noMatter: {
+		en: "But no matter what I do,"
+	},
+	littleDifferent: {
+		en: "I just hope to make this world a little different."
+	},
+	title: {
+		en: "AI Enthusiast | Web Developer"
+	},
+	project: {
+		en: "Certs"
+	},
+	about: {
+		en: "About"
+	}
+});
+---
+
+<html lang={lang}>
+	<head>
+		<Head i18n={t.t} path="" title={t.name} description={t.description} image={ogImage.src} theme="#333" />
+		<script src="@assets/intro/main.js"></script>
+		<script src="@assets/intro/earth.js"></script>
+	</head>
+
+	<body style="background-color: #000">
+		<h1>{t.name}</h1>
+		<Nav blur={false} />
+		<main>
+			<header>
+				<div class="big-title">GP</div>
+			</header>
+			<div id="space">
+				<div id="intro">
+					<div>
+						<div class="type">
+							<span>{t.thisIs}</span>
+							<b>{t.name}</b><span>{t.period}</span><br />
+							<span>{t.aStudent}</span><br />
+							<span>{t.a}</span>
+							{t.aiEnthusiast}<br />
+							<span>{t.alsoA}</span>
+							{t.webDeveloper}<span></span>
+						</div>
+					</div>
+				</div>
+				<div id="about">
+					<div>
+						<div id="create">
+							{t.iLoveCreating}
+							<div class="create">
+								{t.experience}
+								<div class="creates">
+									<div>{t.experience}</div>
+									<div>{t.animations}</div>
+									<div>{t.future}...</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div></div>
+				</div>
+				<div id="data">
+					<div class="data-container">
+						<div>
+							<div class="data-number">
+								<span class="number" data-n="8">0</span>
+							</div>
+							<div class="data-title">{t.certs}</div>
+						</div>
+						<div>
+							<div class="data-number">
+								<span class="number" data-n="100">0</span>%
+							</div>
+							<div class="data-title">{t.aiFocused}</div>
+						</div>
+					</div>
+					<div class="data-space"></div>
+					<div class="data-container">
+						<div>
+							<div class="data-number">
+								<span class="number" data-n="1">0</span>
+							</div>
+							<div class="data-title">{t.yearsLearning}</div>
+						</div>
+						<div>
+							<div class="data-number">
+								<span class="number" data-n="999">0</span>∞
+							</div>
+							<div class="data-title">{t.curiosity}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="alot">
+				<div id="alot">{t.thats}<span id="alot-o"></span>{t.lot}</div>
+			</div>
+			<div id="earth">
+				<div class="earth-text">
+					<div class="type type-do1">{t.noMatter}</div>
+					<div class="type type-do2">{t.littleDifferent}</div>
+				</div>
+			</div>
+			<div id="contact">
+				<div class="contact">
+					<div class="contact-container">
+						<h2 class="aos">{t.name}</h2>
+						<p class="aos">{t.title}</p>
+						<div class="socials aos">
+							<a class="cybr-btn" href="/code/">
+								<span id="thisClassTitleG">{t.project}</span><span aria-hidden>_</span>
+								<span aria-hidden class="cybr-btn__glitch" id="thisClassTitle">{t.project}</span>
+							</a>
+							<a class="cybr-btn" href="/about/">
+								<span id="thisMeetTitleG">{t.about}</span><span aria-hidden>_</span>
+								<span aria-hidden class="cybr-btn__glitch" id="thisMeetTitle">{t.about}</span>
+							</a>
+						</div>
+						<div class="social-links aos">
+							<a href="mailto:patelgaurav0508@gmail.com"><img src={envelope.src} alt="Mail" /></a>
+							<a href="https://www.linkedin.com/in/gaurav-patel-56437a3b9/" target="_blank"><img src={linkedin.src} alt="LinkedIn" /></a>
+							<a href="https://t.me/founder001" target="_blank"><img src={telegram.src} alt="Telegram" /></a>
+						</div>
+					</div>
+				</div>
+				<div id="output"></div>
+				<footer>© 2026 by Gaurav Patel</footer>
+			</div>
+		</main>
+		<script src="@assets/intro/style.js"></script>
+	</body>
+</html>

@@ -1,0 +1,159 @@
+---
+import Nav from "@components/Nav.astro";
+import * as i18n from "@i18n";
+import "@assets/intro/base.css";
+import "@assets/intro/about.css";
+import Footer from "@components/Footer.astro";
+import Head from "@components/Head.astro";
+import ogImage from "@assets/img/thumbnail.webp";
+
+const lang = i18n.local(Astro.url.pathname);
+const t = i18n.t(lang, {
+	title: {
+		en: "About - Gaurav Patel"
+	},
+	gauravpatel: {
+		en: "Gaurav Patel"
+	},
+	description: {
+		en: "I'm Gaurav Patel, a passionate AI & Generative AI enthusiast from Nashik, India. I believe artificial intelligence is the most transformative technology of our generation."
+	},
+	location: {
+		en: "📍 Nashik, Maharashtra, India"
+	},
+	intro: {
+		en: "I've completed multiple Google-certified courses on Coursera covering AI fundamentals, responsible AI, prompt engineering, productivity tools, brainstorming, writing, and content creation."
+	},
+	skills: {
+		en: "Skills"
+	},
+	ido: {
+		en: "I know"
+	},
+	langLib: {
+		en: "Interests"
+	},
+	applications: {
+		en: "Tools & Technologies"
+	},
+	education: {
+		en: "Education"
+	},
+	awards: {
+		en: "Achievements"
+	},
+	experience: {
+		en: "Experience"
+	},
+	certificate: {
+		en: "Google Certificates"
+	},
+	aiGenAI: {
+		en: "AI & Generative AI"
+	},
+	promptEngineering: {
+		en: "Prompt Engineering"
+	},
+	aiProductivity: {
+		en: "AI Productivity"
+	},
+	python: {
+		en: "Python"
+	},
+	webDev: {
+		en: "Web Development"
+	},
+	responsibleAI: {
+		en: "Responsible AI"
+	},
+	bba: {
+		en: "BBA Student"
+	},
+	nashik: {
+		en: "Nashik, India"
+	}
+});
+---
+
+<html lang={lang}>
+	<head>
+		<Head i18n={t.t} title={t.title} description={t.description} theme="#333" image={ogImage.src} />
+	</head>
+
+	<body style="background-color: #000">
+		<Nav />
+		<main>
+			<div class="top">
+				<div class="largeName aos">{t.gauravpatel}</div>
+				<h2 class="aos">{t.location}</h2>
+				<p class="aos intro">
+					{t.description}<br />
+					{t.intro}
+				</p>
+				<h2>{t.skills}</h2>
+			</div>
+			<div class="em"></div>
+			<div class="skill">
+				<div>
+					<h3>{t.ido}</h3>
+					<ol>
+						<li>{t.aiGenAI}</li>
+						<li>{t.promptEngineering}</li>
+						<li>{t.aiProductivity}</li>
+						<li>{t.python}</li>
+						<li>{t.webDev}</li>
+						<li>{t.responsibleAI}</li>
+					</ol>
+				</div>
+				<div>
+					<h3>{t.langLib}</h3>
+					<ol>
+						<li>Generative AI</li>
+						<li>Prompt Engineering</li>
+						<li>Python</li>
+						<li>AI Ethics</li>
+						<li>Web Dev</li>
+						<li>Google Gemini</li>
+						<li>Automation</li>
+						<li>Content AI</li>
+					</ol>
+				</div>
+				<div>
+					<h3>{t.applications}</h3>
+					<ol>
+						<li>Google Gemini</li>
+						<li>ChatGPT</li>
+						<li>Coursera</li>
+						<li>VS Code</li>
+						<li>Git / GitHub</li>
+						<li>Python</li>
+					</ol>
+				</div>
+			</div>
+			<h2>{t.education}</h2>
+			<div class="education">
+				<div class="school aos">
+					<div>
+						<h3>{t.bba}</h3>
+						<p>{t.nashik}</p>
+					</div>
+				</div>
+			</div>
+			<h2 class="awards">{t.certificate}</h2>
+			<h3>2026</h3>
+			<ul>
+				<li>AI for Content Creation</li>
+				<li>AI for Writing and Communicating</li>
+				<li>AI for Brainstorming and Planning</li>
+				<li>AI Fundamentals</li>
+				<li>Use AI Responsibly</li>
+				<li>Discover the Art of Prompting</li>
+				<li>Maximize Productivity With AI Tools</li>
+				<li>Introduction to AI</li>
+			</ul>
+			<div class="github"></div>
+		</main>
+		<Footer />
+		<script src="@assets/intro/style.js"></script>
+	</body>
+</html>
