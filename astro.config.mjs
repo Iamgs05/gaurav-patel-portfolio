@@ -9,8 +9,8 @@ const locales = {
 };
 
 export default defineConfig({
-	site: "https://iamgs05.github.io",
-	base: "/gaurav-patel-portfolio",
+
+	site: "https://iamgs05.github.io/gaurav-patel-portfolio",
 	trailingSlash: "ignore",
 	build: {
 		format: "directory"

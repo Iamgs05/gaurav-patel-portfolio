@@ -13,6 +13,6 @@ export const local = url => {
 
 export const l = url => {
 	return (path, lang = "en") => {
-		return "/gaurav-patel-portfolio" + (path || "/");
+		return path || "/";
 	};
 };
